@@ -34,6 +34,6 @@
   - 注意：旧配置中的秒值（如 `option interval '2'`）升级后语义变为 2ms，会被钳制到最小 100ms；建议升级后手动改为毫秒值（如 `1000`）
   - 注意：升级后需在设备上将 UCI 的 `param_vol` 改名为 `param_temp`（或删除旧项用默认值），否则上报第三项回退为默认 T3
 
-## Unreleased
+## v1.0.2 - 2026-09-09
 
 - 修复（部署）：`Makefile` 的 `postinst` 此前覆盖了 luci.mk 默认行为，未在安装后重启 `rpcd`、也未清理 LuCI 缓存，导致 ubus 对象 `luci.fubotv` 未注册/缓存陈旧，前端页面读不到任何数据（指标显示 `--`）。已在 `postinst` 中补上 `rpcd` 重启与 `/tmp/luci-indexcache`、`/tmp/luci-modulecache` 缓存清理，安装后页面三卡片（CPU / RAM / TEMP）正常显示
