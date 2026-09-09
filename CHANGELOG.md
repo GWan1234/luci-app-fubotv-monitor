@@ -36,4 +36,4 @@
 
 ## Unreleased
 
-- 待补充
+- 修复（部署）：`Makefile` 的 `postinst` 此前覆盖了 luci.mk 默认行为，未在安装后重启 `rpcd`、也未清理 LuCI 缓存，导致 ubus 对象 `luci.fubotv` 未注册/缓存陈旧，前端页面读不到任何数据（指标显示 `--`）。已在 `postinst` 中补上 `rpcd` 重启与 `/tmp/luci-indexcache`、`/tmp/luci-modulecache` 缓存清理，安装后页面三卡片（CPU / RAM / TEMP）正常显示
