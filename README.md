@@ -264,4 +264,4 @@ luci-app-fubotv-monitor/
 
 ## 七、许可
 
-MIT
+本项目采用 **GNU 通用公共许可证 v3.0（GPLv3）**，详细条款请参阅仓库根目录的 [`LICENSE`](LICENSE) 文件。
