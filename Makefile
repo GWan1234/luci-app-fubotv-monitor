@@ -3,6 +3,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-fubotv-monitor
 PKG_VERSION:=1.0.2
 PKG_RELEASE:=1
+PKG_LICENSE:=GPL-3.0-only
 
 LUCI_TITLE:=FuBoTv monitor reporter for ESP8266 weather clock
 LUCI_DESCRIPTION:=Report router CPU, RAM utilization and CPU temperature to an \
